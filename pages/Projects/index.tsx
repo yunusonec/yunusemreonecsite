@@ -52,9 +52,9 @@ const Projects: NextPage = (props: any) => {
         {!isTabletOrMobile ? (
           <div className="w-full mt-3 mb-5 pb-5 grid grid-cols-1s xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 ">
             {props?.projects?.map((obj: any, index: number) => (
-              <div className="mb-4 p-3">
+              <div key={`project-${index}`} className="mb-4 p-3">
                 <div className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-                  <Link href={`/Projects/${index + 1}`}>
+                  <Link href={`/Projects/${index + 1}`} passHref>
                     <div>
                       <div className="pr-3 pl-3">
                         <Image
@@ -93,7 +93,7 @@ const Projects: NextPage = (props: any) => {
             {props?.projects?.map((obj: any, index: number) => (
               <div className="mb-5 " key={index + 125}>
                 <div className="w-full rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-                  <Link href={`/Projects/${index + 1}`}>
+                  <Link href={`/Projects/${index + 1}`} passHref>
                     <div>
                       <div className="">
                         <Image

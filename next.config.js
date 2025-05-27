@@ -9,5 +9,6 @@ module.exports = {
   },
   images: {
     domains: ["localhost", "vercel.app", "ayedot.com"],
+    unoptimized: true,
   },
 };
