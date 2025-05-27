@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import { animedata } from "../Components/JSON/animedata";
 import { useMediaQuery } from "react-responsive";
 import { AlarmType } from "aws-sdk/clients/cloudwatch";
