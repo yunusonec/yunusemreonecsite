@@ -58,7 +58,7 @@ export const SideSecondPanel: React.FC<IProps> = (props: any) => {
     } else if (currentSubLink === "Startup") {
       setActiveCurrentSubLink("Startup");
     }
-  });
+  }, []);
 
   return (
     <div className="menu-option overflow-hidden">
