@@ -86,6 +86,9 @@ const Layout: React.FC = ({ children, visitorsCount }: any) => {
             <Link href="/Email">Contact</Link>
           </li>
           <li className="header-menu-link">
+            <Link href="/Teams">Teams</Link>
+          </li>
+          <li className="header-menu-link">
             <Link href="/Hobbies">Hobbies</Link>
           </li>
         </ul>

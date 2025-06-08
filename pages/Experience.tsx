@@ -270,7 +270,7 @@ const MyWork: NextPage = () => {
                   iconStyle={{ background: "rgb(53, 57, 61)", color: "#fff" }}
                   icon={
                     <Image
-                      src={"/beekodlogo.jpg"}
+                      src={"/teori-logo.jpg"}
                       width="500"
                       height="500"
                       className="rounded-full"

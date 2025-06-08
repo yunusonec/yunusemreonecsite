@@ -12,6 +12,7 @@ export const SideSecondPanel: React.FC<IProps> = (props: any) => {
   const [aboutClose, setAboutClose] = useState(false);
   const [projectsClose, setProjectsClose] = useState(false);
   const [contactClose, setcontactClose] = useState(false);
+  const [teamsClose, setTeamsClose] = useState(false);
   const [miscClose, setmiscClose] = useState(false);
   let isTabletOrMobile = useMediaQuery({ query: "(max-width: 943px)" });
 
@@ -47,6 +48,8 @@ export const SideSecondPanel: React.FC<IProps> = (props: any) => {
       setActiveCurrentSubLink("Blogs");
     } else if (currentSubLink === "Email") {
       setActiveCurrentSubLink("Email");
+    } else if (currentSubLink === "Teams") {
+      setActiveCurrentSubLink("Teams");
     } else if (currentSubLink === "Gaming") {
       setActiveCurrentSubLink("Gaming");
     } else if (currentSubLink === "Anime") {
@@ -282,6 +285,40 @@ export const SideSecondPanel: React.FC<IProps> = (props: any) => {
                       name="Email.tsx"
                       link="/Email"
                       icon={<span className="icons8-gmail"></span>}
+                    />
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="menu-drop pt-1 ">
+          <div className="box-click">
+            <div
+              className="flex pl-2 cursor-pointer"
+              onClick={() => setTeamsClose(!teamsClose)}
+            >
+              <div className="myweight flex-min topPadd">
+                {!teamsClose ? <DownIcon /> : <RightIcon />}
+              </div>
+              <span className="myweight flex-auto">Teams</span>
+            </div>
+            {!teamsClose && (
+              <div className="show-pre">
+                <ul>
+                  <li
+                    onClick={() => {
+                      router.push("/Teams");
+                      isTabletOrMobile ? props.closeSideMenu() : null;
+                    }}
+                    className={` smallSide ${
+                      activeCurrentSubLink === "Teams" ? "active" : ""
+                    }`}
+                  >
+                    <SidePanelSubLink
+                      name="Teams.tsx"
+                      link="/Teams"
+                      icon={<span className="icons8-typescript"></span>}
                     />
                   </li>
                 </ul>
