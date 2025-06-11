@@ -279,6 +279,18 @@ const Home: NextPage = () => {
                       </div>
                     </Link>
                   </div>
+                  
+                  <div className="mt-4 hidden">
+                    <div className="rounded-lg overflow-hidden">
+                      <img src="/img/portalLogin.png" alt="ASD Portal Login" className="w-full h-auto rounded-lg" />
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 hidden">
+                    <div className="rounded-lg overflow-hidden">
+                      <img src="/img/mailbg.png" alt="Mail Background" className="w-full h-auto rounded-lg" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
